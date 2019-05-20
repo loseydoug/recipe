@@ -22,6 +22,68 @@
 .App-link {
   color: #61dafb;
 }
+.slideout-nav.expanded {
+  width: 300px;
+  background-color: rgb(58,58,58);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+.slideout-nav.collapsed {
+  width: 10%;
+  max-width: 40px;
+  background-color: rgb(58,58,58);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+.slideout-nav.expanded .btn {
+  width: 90%;
+  max-width: 260px;
+  height: 55px;
+  border: none;
+  background-color: rgb(58,58,58);
+  color: #61dafb;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: left;
+  border-bottom: 2px rgb(120,120,120) solid;
+}
+
+.slideout-nav.collapsed .btn.action {
+  display: none;
+}
+
+.slideout-nav .collapsed.btn {
+  height: 100%;
+  width: 10%;
+  min-width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 2px rgb(120,120,120) solid;
+  background-color: rgb(58,58,58);
+}
+
+.slideout-nav .expanded.btn {
+  height: 100%;
+  width: 10%;
+  min-width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 2px rgb(120,120,120) solid;
+}
+
+.slideout-nav .btn:hover {
+  background-color: rgb(120,120,120) ;
+}
 
 @keyframes App-logo-spin {
   from {
