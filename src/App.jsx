@@ -1,31 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Welcome from './components/Welcome.jsx';
 import Slideout from './components/Slideout.jsx';
+import RecipeInput from './components/RecipeInput.jsx';
+import RecipeMultiInput from './components/RecipeMultiInput.jsx';
+import ListContainer from './components/ListContainer.jsx';
 
 function App() {
   return (
     <div className="App">
-{/*      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="Doug" salutation="Mr." />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>*/}
-      <Slideout isExpanded="false" />
+      <Slideout isExpanded="true" />
+      <div className="recipe-form">
+        <RecipeInput inputName="recipe-name" inputLabel="Name:" />
+        <RecipeInput inputName="main-ingredient" inputLabel="Main Ingredient:" />
+
+        <RecipeMultiInput inputName="alt-ingredients" inputLabel="Alt Ingredients:" />
+        <ListContainer />
+
+        <RecipeMultiInput inputName="supporting-ingredients" inputLabel="Supporting Ingredients:" />
+        <ListContainer />
+
+        <RecipeMultiInput inputName="optional-ingredients" inputLabel="Optional Ingredients:" />
+        <ListContainer />
+      </div>
     </div>
   );
 }
+
+// const mapStateToProps = state => ({
+//   altIngredients: state.altIngredients, state.visibilityFilter)
+// })
+
+// const mapDispatchToProps = dispatch => ({
+//   toggleTodo: id => dispatch(toggleTodo(id))
+// })
 
 export default App;
